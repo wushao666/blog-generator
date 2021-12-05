@@ -2,6 +2,13 @@
 title: "hugo搭建博客"
 date: 2021-12-04T15:10:38+08:00
 draft: false
+
+tags: ["hugo"]
+categories: ["hugo"]
+
+contentCopyright: MIT
+mathjax: true
+autoCollapseToc: true
 ---
 
 ## 前言
@@ -27,7 +34,7 @@ brew install hugo
 执行完上述代码后，会在当前目录下生成一个以`你的博客名字`命名的目录。
 
 ### 添加基础主题
-经过上述两步之后，我们已经有了基础的博客站点，但是目前还不能使用，我们需要安装一个基础主题
+经过上述两步之后，我们已经有了基础的博客站点，但是目前还不能使用，我们需要安装一个基础主题ananke
 
 ```javascript
 cd 你的博客名字
@@ -36,7 +43,8 @@ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git theme
 echo theme = \"ananke\" >> config.toml
 ```
 ### 创建博客
-`hugo new posts/my-first-post.md`，其中`my-first-post.md`即要创建的博客名字，可随意替换，此时我们的目录结构如下：
+`hugo new posts/my-first-post.md`，其中`my-first-post.md`即要创建的博客名字，可随意替换(如果是`even`主题，用`hugo new post/my-first-post.md`)
+此时我们的目录结构如下：
 ![目录结构](/images/createMd/dir.png)
 此时打开刚才新建的文章，做一下小修改：
 

@@ -2,6 +2,12 @@
 title: "同一台电脑创建多个github账户"
 date: 2021-12-04T21:52:55+08:00
 draft: false
+tags: ["git"]
+categories: ["git"]
+
+contentCopyright: MIT
+mathjax: true
+autoCollapseToc: true
 ---
 
 通常我们会有一个工作的gitlab账户、还会有一个github私人账号用，或者有两个及以上的github账号，所以在同一台电脑上会存在多个`github`账户的情况，此时默认的githug配置不在生效，我们要先清除掉之前设置的全局`github 用户名和邮箱`。

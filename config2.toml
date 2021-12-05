@@ -1,0 +1,4 @@
+baseURL = 'http://wushao666.github.io/'
+languageCode = 'zh-Hans'
+title = '吴少林写字的地方'
+theme = "ananke"
