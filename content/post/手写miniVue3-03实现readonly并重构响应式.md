@@ -108,7 +108,7 @@ export {
 ```
 
 ## 实现`readonly`
-其实经过上面的重构，我们已经实现完了`readonly`。而且后期我们实现新的代理会变的很容易，直接增加对应的`baseHandler`即可，先看一下测试用例的用法：
+其实经过上面的重构，我们已经实现完了`readonly()`，它是响应式核心之一。而且后期我们实现新的代理会变的很容易，直接增加对应的`baseHandler`即可，先看一下测试用例的用法：
 
 ```javascript
 import { readonly } from "../reactive";
