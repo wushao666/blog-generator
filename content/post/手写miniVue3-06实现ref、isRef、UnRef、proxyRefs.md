@@ -1,5 +1,5 @@
 ---
-title: "手写miniVue3-06实现ref、isRef、UnRef"
+title: "手写miniVue3-06实现ref、isRef、unRef、proxyRefs"
 date: 2022-10-10T14:31:28+08:00
 draft: false
 
@@ -314,7 +314,7 @@ export {
 }
 ```
 
-## 实现`isRef和UnRef`
+## 实现`isRef和unRef`
 
 本节我们再次实现关于ref的工具函数，先看新增的测试用例:
 
@@ -366,7 +366,7 @@ export {
 ```
 
 ### 实际开发中的注意事项
-在实际`vue3`项目开发中，`template`中的ref对象会被自动解包，相当于直接`unRef()`了，不需要.value操作，但是注意📢：
+在实际`vue3`项目开发中，`template`中的ref对象会被自动解包，不需要.value操作，但是注意📢：
 - 仅当 ref 是模板渲染上下文的顶层属性时才适用自动“解包”。 例如， foo 是顶层属性，但 object.foo 不是。
 
 ```html
@@ -411,4 +411,65 @@ console.log(books[0].value)
 const map = reactive(new Map([['count', ref(0)]]))
 // 这里需要 .value
 console.log(map.get('count').value)
+```
+那么上面为什么可以不用.value，自动解包呢，继续往下实现`proxyRefs`
+
+## 实现`proxyRefs`
+`proxyRefs()`就是代理ref，帮你直接返回.value的操作，先看测试用例：
+
+```typescript
+// ref.spec.ts 新增
+it("proxyRefs", () => {
+  // 代理refs就是template里面不需要.value的原因
+  const user = {
+    age: ref(10),
+    name: "xiaohong",
+  };
+
+  const proxyUser = proxyRefs(user);
+  expect(user.age.value).toBe(10);
+  expect(proxyUser.age).toBe(10); // 一旦被代理过就不需要再获取.value属性了
+  expect(proxyUser.name).toBe("xiaohong");
+
+  proxyUser.age = 20;
+
+  expect(proxyUser.age).toBe(20);
+  expect(user.age.value).toBe(20);
+
+  proxyUser.age = ref(10);
+  expect(proxyUser.age).toBe(10);
+  expect(user.age.value).toBe(10);
+});
+```
+分析测试用例可以知道：
+1. get的时候，如果是ref，直接返回.value，如果不是ref，直接返回value即可，也就是之前实现的unRef()
+2. set的时候，先判断原来是什么类型，新设置的是什么类型，如果原来是ref，设置了普通值，直接替换，如果是ref，就返回值
+
+```typescript
+// ref.ts 新增
+
+function proxyRefs(objectWithRefs) {
+  return new Proxy(objectWithRefs, {
+    get(target, key) {
+      const value = Reflect.get(target, key)
+      return unRef(value)
+    },
+    set(target, key, value) {
+      const oldValue = target[key]
+      const result = Reflect.set(target, key, value)
+      if(isRef(oldValue) && !isRef(value)) {
+        // 原来是ref，新设置的不是ref的类型
+        // 直接设置原来ref.value为新的值
+        return target[key].value = value
+      } else {
+        // 新设置的一个新的ref对象，就直接替换就行
+        return result
+      }
+    }
+  })
+}
+
+export {
+  proxyRefs,
+}
 ```
