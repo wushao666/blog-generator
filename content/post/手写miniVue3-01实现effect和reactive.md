@@ -75,7 +75,7 @@ function reactive(raw) {
   return new Proxy(raw, {
     get(target, key) {
       // 当我们获取值的时候触发这里getter处理器，通常用来收集依赖
-      trigger(target, key) // TODO 在effect中实现
+      track(target, key) // TODO 在effect中实现
       // proxy为什么要配合使用Reflect详见后面的分析
       const value = Reflect.get(target, key)
       return value
