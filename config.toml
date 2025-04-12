@@ -144,16 +144,16 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     repo = ""               # The repo to store comments
 
   [params.gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
-    owner = ""              # Your GitHub ID
-    repo = ""               # The repo to store comments
-    clientId = ""           # Your client ID
-    clientSecret = ""       # Your client secret
+    owner = "wushao666"              # Your GitHub ID
+    repo = "https://github.com/wushao666/hugo-blog-comments.git"               # The repo to store comments
+    clientId = "Ov23liIOS4xVWBCr8CiQ"           # Your client ID
+    clientSecret = "6a46848dfba641e0039bf1d5f3fe12b9537baee3"       # Your client secret
 
   # Valine.
   # You can get your appid and appkey from https://leancloud.cn
   # more info please open https://valine.js.org
   [params.valine]
-    enable = true
+    enable = false
     appId = 'YpBHjDSe3NF14qHWCnclFngj-gzGzoHsz'
     appKey = 'mXJxlZS7txiXxPeIOkz7GVEP'
     notify = false  # mail notifier , https://github.com/xCss/Valine/wiki

@@ -8,6 +8,7 @@ weight: 50
 ---
 
 ☀️ 热爱web开发，爱打球⛹，爱大自然❤
+[个人简历](https://vvushaolin.com/resume/)
 ***
 - 2018-2021    北京-NUCTECH
 - 2021-2023    北京-获得场景
