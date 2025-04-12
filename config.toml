@@ -145,7 +145,8 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 
   [params.gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
     owner = "wushao666"              # Your GitHub ID
-    repo = "https://github.com/wushao666/hugo-blog-comments.git"               # The repo to store comments
+    # 这样访问的 https://api.github.com/repos/wushao666/hugo-blog-comments/issues?labels=Gitalk,2025-03-26+23:30:38+%2B0800+CST&t=1744430234861
+    repo = "hugo-blog-comments"               # The repo to store comments 仓库名字就行
     clientId = "Ov23liIOS4xVWBCr8CiQ"           # Your client ID
     clientSecret = "6a46848dfba641e0039bf1d5f3fe12b9537baee3"       # Your client secret
 
