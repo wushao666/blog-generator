@@ -7,11 +7,15 @@ weight: 50
 
 ---
 
-☀️ 热爱web开发，爱打球⛹，爱大自然❤
+- 爱web开发👨🏻‍💻
+- 爱打球⛹
+- 爱大自然 🏞️
 ***
-- 2018-2021    北京-NUCTECH
-- 2021-2023    北京-获得场景
-- 2023-2024    北京-完美世界总部
-- 2024-至今     上海-Tencent-IEG
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 时间 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 公司 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| :----: | :----: |
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2018-2021 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; `北京-NUCTECH` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |
+| 2021-2023 | `北京-获得场景` |
+| 2023-2024 | `北京-完美世界-AILab` |
+| 2024-至今 | `上海-Tencent-IEG` |
 
 
