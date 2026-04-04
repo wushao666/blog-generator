@@ -208,7 +208,8 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 # see https://gohugo.io/getting-started/configuration-markup
 [markup]
   [markup.tableOfContents]
-    startLevel = 1
+    startLevel = 1   # 从一级标题开始显示
+    endLevel = 3     # 显示到三级标题（改这里！）
   [markup.goldmark.renderer]
     unsafe = true
 
