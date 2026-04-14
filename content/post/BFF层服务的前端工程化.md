@@ -1,6 +1,6 @@
 ---
-title: "为BFF层服务的前端工程化"
-date: 2025-03-26T10:35:43+08:00
+title: "BFF层服务的前端工程化"
+date: 2024-08-26T10:35:43+08:00
 draft: false
 
 tags: ["BFF层"]
@@ -10,7 +10,8 @@ contentCopyright: MIT
 mathjax: true
 autoCollapseToc: true
 ---
-本节是为了BFF层设计的前端基建内容，在做前端基建之前，还是要再次复习一下我们之前的[BFF服务端架构设计](/post/bff的服务端设计)，方便我们更好的配合它做基建。
+这个系列是基于在鹅厂的工程实践，抽象出来的MVP版本实践。
+本文就是为了BFF层设计的前端基建内容，在做前端基建之前，还是要再次复习一下我们之前的[BFF服务端架构设计](/post/bff的服务端设计)，方便我们更好的配合它做基建。
 
 这套工程化是根据当前的BFF需求（下图所示）而设计的。
 ![nova-core](/images/nova-bff/BFF-structure.png)
