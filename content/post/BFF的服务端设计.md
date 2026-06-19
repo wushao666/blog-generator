@@ -10,6 +10,9 @@ contentCopyright: MIT
 mathjax: true
 autoCollapseToc: true
 ---
+
+号外：发现hono.js是个神器呀，配合上 cloudflare，再加上 AI 时代的需要，又能跨平台、性能还猛……
+
 这个系列是基于在鹅厂的工程实践，抽象出来的MVP版本实践。，也能记录那段还算快乐的时光。
 
 本文是BFF层设计的开端：使用koa封装服务端逻辑。
