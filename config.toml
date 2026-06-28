@@ -1,7 +1,7 @@
 baseURL = 'http://wushao666.github.io/'
 languageCode = 'zh-Hans'
 defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... (This field determines which i18n file to use)
-title = "吴少在Coding"
+title = "林川在Coding"
 preserveTaxonomyNames = true
 enableRobotsTXT = true
 enableEmoji = true
