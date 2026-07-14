@@ -45,9 +45,11 @@ main() {
   fi
 
   log "Syncing public output to $TARGET_REPO"
-  rsync -av --delete \
+  rsync -av \
     --exclude='.git/' \
     --exclude='scripts/' \
+    --exclude='AGENTS.md' \
+    --exclude='CNAME' \
     --exclude='*.png' \
     --exclude='*.ico' \
     "$PUBLIC_DIR/" "$TARGET_REPO/"

@@ -28,13 +28,13 @@
 hugo -D
 ```
 
-随后脚本会把 `public/` 中除了 `*.png`、`*.ico` 以外的内容同步到同级目录 `../wushao666.github.io/`。目标仓库中的 `.git/` 与 `scripts//` 会被保留，避免破坏目标仓库自身的版本控制和自动提交脚本。
+随后脚本会把 `public/` 中除了 `*.png`、`*.ico` 以外的内容复制到同级目录 `../wushao666.github.io/`，只覆盖同名文件和新增文件，不删除目标仓库中已有但本次构建未生成的文件。目标仓库中的 `.git/`、`scripts/`、`AGENTS.md` 与 `CNAME` 会被保留，避免破坏目标仓库自身的版本控制、自动提交脚本、项目文档和 GitHub Pages 自定义域名配置。
 
 设计逻辑：
 
 1. 为什么这样设计：发布动作只应该发生在源码提交成功之后，避免未提交或提交失败的内容被同步到发布仓库。
-2. 怎么做的：使用 git `post-commit` hook 调用发布脚本，发布脚本先运行 Hugo 构建，再用 `rsync` 做增量替换，并排除图片图标文件。
-3. 做到了什么样子：每次源码提交后自动生成最新 `public/`，同步到 `wushao666.github.io`，再调用目标仓库脚本执行一次 `git add -> commit -> push`。
+2. 怎么做的：使用 git `post-commit` hook 调用发布脚本，发布脚本先运行 Hugo 构建，再用 `rsync` 做只覆盖不删除的复制，并排除图片图标文件，同时保护目标仓库的 `CNAME` 和 `AGENTS.md`。
+3. 做到了什么样子：每次源码提交后自动生成最新 `public/`，覆盖同步到 `wushao666.github.io`，再调用目标仓库脚本执行一次 `git add -> commit -> push`。
 
 流程图：
 
