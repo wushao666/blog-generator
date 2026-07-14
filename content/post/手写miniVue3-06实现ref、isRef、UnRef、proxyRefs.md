@@ -1,6 +1,6 @@
 ---
-title: "手写miniVue3-06实现ref、isRef、unRef、proxyRefs"
-date: 2022-10-10T14:31:28+08:00
+title: "手写vue3-06实现ref、isRef、unRef、proxyRefs"
+date: 2022-04-18T14:31:28+08:00
 draft: false
 
 tags: ["vue3"]
@@ -10,11 +10,12 @@ contentCopyright: MIT
 mathjax: true
 autoCollapseToc: true
 ---
-
-## 实现`ref`
 本节我们要实现一个超级重要的响应式操作-`ref()`，它是比响应式核心中的`reactive()`使用的更为频繁的一个操作，真正的`vue3开发`中我们也是会经常看到`ref`的身影，主要是因为`reactive()`有一定的[局限性](https://cn.vuejs.org/guide/essentials/reactivity-fundamentals.html#limitations-of-reactive)：
 > 1. 仅对对象类型有效，对于基本类型`string boolean number`类型无效
 > 2. 因为`vue3响应式系统`需要通过属性访问进行追踪，因此我们必须始终保持对该响应式对象的相同引用。这意味着我们不可以随意地“替换”一个响应式对象，因为这将导致对初始引用的响应性连接丢失：
+
+## 实现`ref`
+
 
 ```javascript
 let state = reactive({ count: 0 })

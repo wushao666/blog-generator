@@ -1,6 +1,6 @@
 ---
-title: "手写miniVue3-07实现computed"
-date: 2022-10-10T20:03:54+08:00
+title: "手写vue3-07实现computed"
+date: 2022-06-30T20:03:54+08:00
 draft: false
 
 tags: ["vue3"]
@@ -10,6 +10,7 @@ contentCopyright: MIT
 mathjax: true
 autoCollapseToc: true
 ---
+computed是vue3中一个非常重要的api，它允许我们定义一个计算属性，这个属性会根据依赖的响应式数据自动更新。
 
 ## 实现`computed`
 本节实现`computed()`，先看测试用例：

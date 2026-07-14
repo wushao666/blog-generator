@@ -1,6 +1,6 @@
 ---
-title: "手写miniVue3-04实现isReadonly和isReactive和嵌套对象深层响应"
-date: 2022-10-09T17:24:00+08:00
+title: "手写miniVue3-04实现isReadonly和isReactive"
+date: 2022-03-31T17:24:00+08:00
 draft: false
 
 tags: ["vue3"]
@@ -11,8 +11,14 @@ mathjax: true
 autoCollapseToc: true
 ---
 
+这两个属于响应式的工具类，判断是属于哪种类型的响应式对象.
+- isReactive(target): 判断对象是否由 reactive() 创建的响应式代理
+- isReadonly(target): 判断对象是否由 readonly() 创建的响应式代理
+
+<!-- more -->
+
 ## 实现`isReadonly`和`isReactive`
-这两个属于响应式的工具类，判断是属于哪种类型的响应式对象，照旧先看测试用例：
+照旧先看测试用例：
 
 ```javascript
 // reactive.spec.ts 新增

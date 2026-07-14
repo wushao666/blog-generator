@@ -1,6 +1,6 @@
 ---
-title: "手写miniVue3-05实现shallowReactive和isProxy"
-date: 2022-10-10T10:07:06+08:00
+title: "手写vue3-05实现shallowReactive和isProxy"
+date: 2022-04-10T10:07:06+08:00
 draft: false
 
 tags: ["vue3"]
@@ -11,8 +11,18 @@ mathjax: true
 autoCollapseToc: true
 ---
 
+想象两个场景：
+1. 当后端返回上万条数据的表格、复杂树形结构，这种大数据源，如果你用 reactive 做proxy，性能开销巨大
+2. 全局常量配置、基础数据源，应该保护根对象不被整体覆盖，允许修改内部子数据
+所以 vue3 提供了两个工具函数——浅响应式的方案，shallowReactive shallowReadonly，顾名思义就是浅响应式，只对最外层对象做响应式处理，内部对象不做响应式处理。
+<!-- more -->
+
 ## 实现`shallowReactive shallowReadonly`
+
+
 照旧，我们先来看看测试用例，要做什么：
+```javascript
+
 
 ```typescript
 // shallowReactive.spec.ts
@@ -166,3 +176,9 @@ export {
   isProxy
 }
 ```
+
+## 如何选用
+1. 数据很深、只改顶层 → shallowReactive
+2. 要保护根对象、允许改内部子属性 → shallowReadonly
+3. 频繁修改嵌套多层属性 → reactive
+4. 完全禁止任何层级修改 → readonly
