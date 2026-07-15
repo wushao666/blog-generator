@@ -33,22 +33,17 @@ weight: 50
       <td style="text-align: center; padding: 8px; border: 1px solid #ddd;"><code>软件实习生</code></td>
     </tr>
     <tr>
-      <td style="text-align: center; padding: 8px; border: 1px solid #ddd;">2018-2021</td>
+      <td style="text-align: center; padding: 8px; border: 1px solid #ddd;">2018-2022</td>
       <td style="text-align: center; padding: 8px; border: 1px solid #ddd;"><code>北京-同方威视-AI中心</code></td>
       <td style="text-align: center; padding: 8px; border: 1px solid #ddd;"><code>软件工程师</code></td>
     </tr>
     <tr>
-      <td style="text-align: center; padding: 8px; border: 1px solid #ddd;">2021-2023</td>
-      <td style="text-align: center; padding: 8px; border: 1px solid #ddd;"><code>北京-获得场景-云课堂</code></td>
-      <td style="text-align: center; padding: 8px; border: 1px solid #ddd;"><code>前端工程师</code></td>
-    </tr>
-    <tr>
-      <td style="text-align: center; padding: 8px; border: 1px solid #ddd;">2023-2024</td>
+      <td style="text-align: center; padding: 8px; border: 1px solid #ddd;">2022-2023</td>
       <td style="text-align: center; padding: 8px; border: 1px solid #ddd;"><code>北京-完美世界-AILab</code></td>
       <td style="text-align: center; padding: 8px; border: 1px solid #ddd;"><code>前端工程师</code></td>
     </tr>
     <tr>
-      <td style="text-align: center; padding: 8px; border: 1px solid #ddd;">2024-至今</td>
+      <td style="text-align: center; padding: 8px; border: 1px solid #ddd;">2023-至今</td>
       <td style="text-align: center; padding: 8px; border: 1px solid #ddd;"><code>上海-Tencent-IEG</code></td>
       <td style="text-align: center; padding: 8px; border: 1px solid #ddd;"><code>前端工程师</code></td>
     </tr>
